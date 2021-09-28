@@ -1,10 +1,11 @@
 import React from "react";
+import Homepage from "./Views/Homepage";
 import "./styles/App.scss";
 
 export default function App() {
   return (
-    <>
-      <h1>Research-storyboard</h1>
-    </>
+    <div id="app">
+      <Homepage />
+    </div>
   );
 }
