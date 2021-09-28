@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import ReactFlow from "react-flow-renderer";
+import ReactFlow, { addEdge, updateEdge } from "react-flow-renderer";
 import initialEls from "../DataServices/MockNodeData";
 import "../styles/boardView.scss";
 
@@ -29,11 +29,23 @@ export default function Boardview() {
     setElements((els) => els.concat(newNode));
   }, [setElements]);
 
+  // node connection functionality; gets called after
+  // // edge gets dragged to another source/target
+  // src: https://reactflow.dev/examples/updatable-edge/
+  const addConnection = (params) => setElements((els) => addEdge(params, els));
+  const updateConnection = (oldEdge, newConnection) =>
+    setElements((els) => updateEdge(oldEdge, newConnection, els));
+
   return (
     <div id="board-view">
       <h1>Research-storyboard</h1>
       <button onClick={addNode}>Add Node</button>
-      <ReactFlow elements={elements} onLoad={onLoad} />
+      <ReactFlow
+        elements={elements}
+        onLoad={onLoad}
+        onConnect={addConnection}
+        onEdgeUpdate={updateConnection}
+      />
     </div>
   );
 }
