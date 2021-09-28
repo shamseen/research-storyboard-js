@@ -1,0 +1,32 @@
+{
+  "name": "research-storyboard-js",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/shamseen/research-storyboard-js.git",
+  "author": "shamseen",
+  "license": "MIT",
+  "dependencies": {
+    "antd": "^4.16.13",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-flow-renderer": "^9.6.7",
+    "react-scripts": "^4.0.3",
+    "sass": "^1.42.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
