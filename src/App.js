@@ -1,4 +1,3 @@
-import React from "react";
 import Homepage from "./Views/Homepage";
 import "./styles/App.scss";
 
